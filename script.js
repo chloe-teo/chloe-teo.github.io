@@ -173,7 +173,7 @@ const printButton = document.getElementById('printResume');
 const languageButtons = document.querySelectorAll('[data-language]');
 const themeButtons = document.querySelectorAll('[data-theme-choice]');
 const pageTranslations = {
-  en: Object.fromEntries([...document.querySelectorAll('[data-i18n]')].map((element) => [element.dataset.i18n, element.textContent.trim()])),
+  en: Object.fromEntries([...document.querySelectorAll('[data-i18n]')].map((element) => [element.dataset.i18n, element.matches('span') ? element.textContent : element.textContent.trim()])),
   fr: frenchTranslations,
 };
 let currentLanguage = 'en';
