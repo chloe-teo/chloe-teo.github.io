@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Chloe Teo's career summary and professional experience." />
+  <title>Chloe Teo | Career Summary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <header class="hero">
+      <div class="hero-intro">
+        <img class="profile-photo" src="assets/profile.jpg" alt="Chloe Teo profile photo" />
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">DevOps · Cloud Infrastructure · Software Engineering</p>
+          <h2>Chloe Teo</h2>
+        </div>
+        <div class="language-toggle" role="group" aria-label="Language selector">
+          <span class="language-label" data-i18n="languageLabel">Language</span>
+          <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+          <button class="language-button" type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+        <div class="theme-toggle" role="group" aria-label="Appearance selector">
+          <span class="language-label" data-i18n="themeLabel">Theme</span>
+          <button class="theme-button is-active" type="button" data-theme-choice="dark" aria-pressed="true" data-i18n="darkMode">Dark</button>
+          <button class="theme-button" type="button" data-theme-choice="light" aria-pressed="false" data-i18n="lightMode">Light</button>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="careerSummary">Career summary</p>
+          <h1 class="hero-title" data-i18n="careerTitle">DevOps and software engineering background</h1>
+          <p class="lede" data-i18n="careerPageIntro">A six-year career across software engineering, delivery automation, and reliable cloud infrastructure.</p>
+          <div class="certification-chips">
+            <span class="chip certification-chip" data-i18n="certificationAz104">AZ-104 certified</span>
+            <span class="chip certification-chip" data-i18n="certificationCkad">CKAD certified</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="index.html" data-i18n="backHome">← Back to portfolio</a>
+            <a class="button button-secondary" href="assets/Resume_ChloéTeo_2026.pdf" target="_blank" rel="noreferrer" data-i18n="openResume">Open PDF resume ↗</a>
+            <a class="button button-secondary" href="#achievements" data-i18n="seeAchievements">See achievements ↓</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="profile-kicker" data-i18n="focusAreas">Skills &amp; technologies</div>
+          <ul class="focus-list">
+            <li data-i18n="skillTerraform">Terraform IaC</li>
+            <li data-i18n="skillDocker">Docker</li>
+            <li data-i18n="skillAks">Azure Kubernetes Services</li>
+            <li data-i18n="skillAzurePipelines">Azure CI/CD pipelines</li>
+            <li data-i18n="skillAzureDevops">Azure DevOps</li>
+            <li data-i18n="skillHelm">Helm Chart Templating</li>
+            <li data-i18n="skillGithubActions">GitHub Actions</li>
+            <li data-i18n="skillArtifactory">JFrog Artifactory</li>
+            <li data-i18n="skillSonarcloud">SonarCloud</li>
+            <li data-i18n="skillKyverno">Kyverno</li>
+            <li data-i18n="skillTerragrunt">Terragrunt</li>
+            <li data-i18n="skillAspnet">ASP.NET Core</li>
+            <li data-i18n="skillAngular">Angular</li>
+            <li data-i18n="skillPython">Python</li>
+          </ul>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="career">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="careerSummary">Career summary</p>
+          <h2 data-i18n="careerTitle">DevOps and software engineering background</h2>
+        </div>
+
+        <div class="career-grid">
+          <article class="summary-card career-summary-card">
+            <h3 data-i18n="summary">Summary</h3>
+            <p data-i18n="summaryText">
+              DevOps and Software Engineer with 6 years of experience across software engineering and cloud infrastructure, delivering scalable applications and reliable cloud infrastructure.
+              Azure Administrator Associate (AZ-104) certified and Certified Kubernetes Application Developer (CKAD) certified.
+            </p>
+          </article>
+
+          <article class="detail-panel achievements-panel" id="achievements">
+            <p class="eyebrow" data-i18n="achievementsEyebrow">Ørsted</p>
+            <h3 data-i18n="achievementsTitle">Selected achievements at Ørsted</h3>
+            <p data-i18n="achievementsIntro">Selected delivery improvements across cloud infrastructure, platform security, and Kubernetes operations.</p>
+            <div class="achievement-list">
+              <details class="achievement-item">
+                <summary data-i18n="achievement1">Reduced Azure resource provisioning from approximately one day to under 30 minutes by restructuring shared Terraform projects and modularizing Azure role assignments for the HPC team.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement1Detail1">Reorganized the RBAC structure around actual projects and separated each project's configuration into dedicated tfvars files.</li>
+                    <li data-i18n="achievement1Detail2">Replaced count with for_each for predictable storage account changes and added validation for resource creation, updates, and deletion.</li>
+                    <li data-i18n="achievement1Detail3">Made the Azure modules more flexible by supporting additional resource properties without hardcoding each property type.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Terraform, Azure Pipelines, Azure CLI, PowerShell, Bash</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement2">Enabled self-service Azure provisioning for non-IT teams through a parameterized Azure Pipeline that generated configuration and triggered Terraform deployments.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement2Detail1">Gathered resource requirements from non-IT teams and translated them into clear pipeline input parameters.</li>
+                    <li data-i18n="achievement2Detail2">Created a reusable workflow that let teams provision Azure resources with less manual intervention from the DevOps team.</li>
+                    <li data-i18n="achievement2Detail3">Kept Terraform-based provisioning consistent and traceable while reducing delivery bottlenecks.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Azure Pipelines, Azure CLI, Bash</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement3">Embedded Kyverno CLI checks in a reusable Azure Pipeline template to detect Kubernetes manifest misconfigurations and provide earlier remediation guidance.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement3Detail1">Integrated Kyverno CLI into a shared Azure Pipeline template to detect Kubernetes manifest misconfigurations.</li>
+                    <li data-i18n="achievement3Detail2">Shifted security feedback earlier in the delivery process so teams could act before deployment.</li>
+                    <li data-i18n="achievement3Detail3">Included remediation guidance in pipeline results so development teams could resolve issues autonomously.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Azure Pipelines, Kyverno CLI, Bash, Python</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement4">Improved Kubernetes access management by refactoring Terraform modules to support custom roles, role bindings, and service accounts without hardcoded definitions.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement4Detail1">Updated Terraform RBAC modules so teams could define custom roles and role bindings without changing module code.</li>
+                    <li data-i18n="achievement4Detail2">Updated service account modules to support custom service accounts for different teams and workloads.</li>
+                    <li data-i18n="achievement4Detail3">Improved the maintainability and flexibility of namespace-level access management.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Terraform, Azure Pipelines</p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <div class="skill-grid">
+            <article class="summary-card skill-card">
+              <h3 data-i18n="devopsEngineer">DevOps Engineer</h3>
+              <p data-i18n="devopsSkills">
+                Docker, Terraform IaC, Terragrunt, Azure Kubernetes Services, Azure CI/CD pipelines, Azure DevOps,
+                Azure Storage Accounts, Helm Chart Templating, GitHub Actions, JFrog Artifactory, SonarCloud, Python, Kyverno.
+              </p>
+            </article>
+            <article class="summary-card skill-card">
+              <h3 data-i18n="softwareEngineer">Software Engineer</h3>
+              <p data-i18n="softwareSkills">
+                ASP.NET Core, Angular, Azure Application Insights, Azure Batch, AWS CloudWatch, MSAL Service,
+                Azure MSSQL Server migration, Vue 3.
+              </p>
+            </article>
+          </div>
+
+          <div class="experience-grid">
+            <article class="detail-panel exp-card">
+              <div class="exp-meta" data-i18n="experienceOrsted">DevOps &amp; Software Engineer · Ørsted · Kuala Lumpur, Malaysia · Oct 2022 – Jun 2026</div>
+              <ul class="timeline-list">
+                <li data-i18n="orsted1">Reduced Azure resource provisioning time from about 1 day to under 30 minutes by refactoring a shared Terraform project structure across 22 state files and modularizing Azure role assignments.</li>
+                <li data-i18n="orsted2">Enabled self-service Azure resource provisioning through an Azure pipeline that generated configuration files and triggered Terraform deployments.</li>
+                <li data-i18n="orsted3">Accelerated Azure-to-AWS migration by implementing centralized GitHub Actions workflows, cutting new app deployment effort from 3 days to 2 hours.</li>
+                <li data-i18n="orsted4">Improved Excel export performance by reducing memory consumption by 50 percent through migration from ClosedXML to OpenXML SDK in an ASP.NET Core worker service.</li>
+                <li data-i18n="orsted5">Supported application security and audit compliance for a reporting system used by about 150 users across Denmark, UK, and Asia.</li>
+                <li data-i18n="orsted6">Improved observability by migrating application monitoring to OpenTelemetry and integrating AWS CloudWatch and X-Ray for an application used by about 50 users across UK, Denmark, and Asia.</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel exp-card">
+              <div class="exp-meta" data-i18n="experienceGhl">Web Developer · GHL Systems Berhad · Kuala Lumpur, Malaysia · Nov 2021 – Sep 2022</div>
+              <ul class="timeline-list">
+                <li data-i18n="ghl1">Migrated legacy frontend from Dojo Toolkit to Vue 3.</li>
+                <li data-i18n="ghl2">Updated Java backend APIs to return standardized REST JSON responses for modern frontend compatibility.</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel exp-card">
+              <div class="exp-meta" data-i18n="experienceDhl">Middleware Developer · DHL IT Services · Kuala Lumpur, Malaysia · May 2020 – Nov 2021</div>
+              <ul class="timeline-list">
+                <li data-i18n="dhl1">Developed and enhanced enterprise middleware solutions using IBM ACE 11 and Software AG webMethods.</li>
+                <li data-i18n="dhl2">Supported more than 200 message flow processes and up to 300K daily messages through IBM MQ for business-critical data exchange.</li>
+                <li data-i18n="dhl3">Delivered ESQL-based enhancements, fixes, and feature improvements with clear technical documentation for cross-team understanding.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="split-section career-lower">
+            <article class="detail-panel">
+              <p class="eyebrow" data-i18n="education">Education</p>
+              <h3 data-i18n="degree">Bachelor's Degree | Computer Science | Yonsei University</h3>
+              <p data-i18n="educationDetails">Seoul, South Korea · 2016 – 2020</p>
+            </article>
+            <article class="detail-panel">
+              <p class="eyebrow" data-i18n="languages">Languages</p>
+              <h3>English, Mandarin, Korean, Malay, French</h3>
+              <p data-i18n="languageDetails">English (fluent), Mandarin (mother tongue), Korean (fluent daily), Malay (intermediate), French (upper beginner).</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

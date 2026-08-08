@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="KubeDock Security Scan project details." />
+    <title>KubeDock Security Scan | Chloe Teo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <header class="hero">
+            <div class="hero-intro">
+                <img class="profile-photo" src="assets/profile.jpg" alt="Chloe Teo profile photo" />
+                <div>
+                    <p class="eyebrow" data-i18n="eyebrow">DevOps · Cloud Infrastructure · Software Engineering</p>
+                    <h2>Chloe Teo</h2>
+                </div>
+                <div class="language-toggle" role="group" aria-label="Language selector"><span class="language-label"
+                        data-i18n="languageLabel">Language</span><button class="language-button is-active" type="button"
+                        data-language="en" aria-pressed="true">EN</button><button class="language-button" type="button"
+                        data-language="fr" aria-pressed="false">FR</button></div>
+                <div class="theme-toggle" role="group" aria-label="Appearance selector"><span class="language-label"
+                        data-i18n="themeLabel">Theme</span><button class="theme-button is-active" type="button"
+                        data-theme-choice="dark" aria-pressed="true" data-i18n="darkMode">Dark</button><button
+                        class="theme-button" type="button" data-theme-choice="light" aria-pressed="false"
+                        data-i18n="lightMode">Light</button></div>
+            </div>
+        </header>
+        <main class="project-detail-grid" data-project-detail="kubedock-security-scan">
+            <section class="section project-detail-intro kubedock-project-intro">
+                <div>
+                    <p class="eyebrow" data-i18n="selectedWork">Selected work</p>
+                    <h1 class="hero-title" id="projectDetailTitle">KubeDock Security Scan</h1>
+                    <p class="lede" id="projectDetailDescription">Azure DevOps extension for scanning Kubernetes
+                        manifests, Dockerfiles, and Helm charts with Checkov, then surfacing results in the pipeline
+                        summary and PR comments.</p>
+                    <div class="project-chips" id="projectDetailChips"></div>
+                </div>
+                <div class="hero-actions"><a class="button button-primary" href="index.html" data-i18n="backHome">← Back
+                        to portfolio</a><a class="button button-secondary"
+                        href="https://github.com/chloe-teo/kubedock-security-scan" target="_blank" rel="noreferrer"
+                        data-i18n="openRepo">Open repo</a></div>
+                <article class="detail-panel project-availability-panel">
+                    <p class="detail-label" data-i18n="projectAvailability">Availability</p>
+                    <p data-i18n="marketplaceText">Published as an Azure DevOps extension for teams to install and use
+                        in their pipelines.</p><a class="inline-link"
+                        href="https://marketplace.visualstudio.com/items?itemName=chloe-teo10.kubedock-security-scan-v1"
+                        target="_blank" rel="noreferrer" data-i18n="openMarketplace">View on Azure DevOps
+                            Marketplace →</a>
+                </article>
+            </section>
+            <section class="section project-media-section">
+                <div class="section-heading">
+                    <p class="eyebrow" data-i18n="projectMedia">Project demonstrations</p>
+                    <h2 data-i18n="overallFlow">Overall flow</h2>
+                </div>
+                <div class="project-media-grid">
+                    <figure class="project-media project-media-featured"><video controls preload="metadata"
+                            poster="assets/kubedock-thumbnail.png">
+                            <source src="assets/kubedock-showcase.mp4" type="video/mp4" />
+                        </video>
+                        <figcaption data-i18n="overallFlow">Overall flow</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow" data-i18n="projectReadme">Summary</p>
+                    <h2 id="projectReadmeTitle">KubeDock Security Scan</h2>
+                </div>
+                <pre class="project-readme-content" id="projectReadmeContent">Loading project content...</pre>
+            </section>
+            <section class="resume-grid">
+                <article class="detail-panel">
+                    <p class="detail-label" data-i18n="projectImpact">Impact</p>
+                    <p id="projectImpactText"></p>
+                </article>
+                <article class="detail-panel">
+                    <p class="detail-label" data-i18n="projectBenefits">Benefits</p>
+                    <p id="projectBenefitsText"></p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

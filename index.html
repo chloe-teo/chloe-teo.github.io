@@ -36,136 +36,44 @@
       <div class="hero-grid">
         <div>
           <h1 class="hero-title" data-i18n="heroTitle">Building cloud infrastructure and secure delivery paths that teams can actually use.</h1>
-          <p class="lede" data-i18n="heroLede">
-            Hi, welcome to my personal website. I’m a DevOps/Software engineer with 6 years of experience across software engineering and DevOps. I am skilled in delivering scalable applications and reliable cloud infrastructure. I’m passionate about building secure, observable, and reusable infrastructure that teams can actually use.
+          <p class="lede">
+            <span data-i18n="ledeIntro">Hi, welcome to my personal website. I’m a </span><strong data-i18n="ledeRole">DevOps/Software engineer</strong><span data-i18n="ledeExperience"> with </span><strong data-i18n="ledeYears">6 years</strong><span data-i18n="ledeSkills"> of experience across software engineering and DevOps. I am skilled in delivering </span><strong data-i18n="ledeApplications">scalable applications</strong><span data-i18n="ledeInfrastructure"> and </span><strong data-i18n="ledeReliable">reliable cloud infrastructure</strong><span data-i18n="ledePassion">. I’m passionate about building </span><strong data-i18n="ledeSecure">secure, observable, and reusable infrastructure</strong><span data-i18n="ledeClosing"> that teams can actually use.</span>
           </p>
+          <div class="certification-chips">
+            <span class="chip certification-chip" data-i18n="certificationAz104">AZ-104 certified</span>
+            <span class="chip certification-chip" data-i18n="certificationCkad">CKAD certified</span>
+          </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects" data-i18n="viewProjects">View projects</a>
-            <a class="button button-secondary" href="#career" data-i18n="careerSummary">Career summary</a>
+            <a class="button button-secondary" href="career.html" data-i18n="careerSummary">Career summary</a>
             <a class="button button-ghost" href="#resume" data-i18n="projectSnapshot">Project snapshot</a>
-            <a class="button button-ghost" href="assets/Resume_ChloéTeo_2026.pdf" target="_blank" rel="noreferrer" data-i18n="openResume">Open PDF resume</a>
+            <a class="button button-ghost" href="assets/Resume_ChloéTeo_2026.pdf" target="_blank" rel="noreferrer" data-i18n="openResume">Open PDF resume ↗</a>
           </div>
         </div>
 
         <aside class="profile-card">
-          <div class="profile-kicker" data-i18n="focusAreas">Focus areas</div>
+          <div class="profile-kicker" data-i18n="focusAreas">Skills &amp; technologies</div>
           <ul class="focus-list">
-            <li data-i18n="focus1">Terraform module design for cloud platforms</li>
-            <li data-i18n="focus2">CI/CD pipeline design and delivery automation</li>
-            <li data-i18n="focus3">Azure Cloud Infra delivery, AKS delivery and bootstrap automation</li>
-            <li data-i18n="focus4">Infra Security scanning and pipeline observability</li>
-            <li data-i18n="focus5">Software engineering and cloud-native application development</li>
+            <li data-i18n="skillTerraform">Terraform IaC</li>
+            <li data-i18n="skillDocker">Docker</li>
+            <li data-i18n="skillAks">Azure Kubernetes Services</li>
+            <li data-i18n="skillAzurePipelines">Azure CI/CD pipelines</li>
+            <li data-i18n="skillAzureDevops">Azure DevOps</li>
+            <li data-i18n="skillHelm">Helm Chart Templating</li>
+            <li data-i18n="skillGithubActions">GitHub Actions</li>
+            <li data-i18n="skillArtifactory">JFrog Artifactory</li>
+            <li data-i18n="skillSonarcloud">SonarCloud</li>
+            <li data-i18n="skillKyverno">Kyverno</li>
+            <li data-i18n="skillTerragrunt">Terragrunt</li>
+            <li data-i18n="skillAspnet">ASP.NET Core</li>
+            <li data-i18n="skillAngular">Angular</li>
+            <li data-i18n="skillPython">Python</li>
           </ul>
         </aside>
       </div>
     </header>
 
     <main>
-      <section class="section" id="career">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="careerSummary">Career summary</p>
-          <h2 data-i18n="careerTitle">DevOps and software engineering background</h2>
-        </div>
-
-        <div class="career-grid">
-          <article class="summary-card career-summary-card">
-            <h3 data-i18n="summary">Summary</h3>
-            <p data-i18n="summaryText">
-              DevOps and Software Engineer with 6 years of experience across software engineering and cloud infrastructure, delivering scalable applications and reliable cloud infrastructure.
-              Azure Administrator Associate (AZ-104) certified and Certified Kubernetes Application Developer (CKAD) certified.
-            </p>
-          </article>
-
-          <div class="skill-grid">
-            <article class="summary-card skill-card">
-              <h3 data-i18n="devopsEngineer">DevOps Engineer</h3>
-              <p data-i18n="devopsSkills">
-                Docker, Terraform IAC, Terragrunt, Azure Kubernetes Services, Azure CI/CD pipelines, Azure DevOps,
-                Azure Storage Accounts, Helm Chart Templating, GitHub Actions, JFrog Artifactory, SonarCloud, Python, Kyverno.
-              </p>
-            </article>
-            <article class="summary-card skill-card">
-              <h3 data-i18n="softwareEngineer">Software Engineer</h3>
-              <p data-i18n="softwareSkills">
-                ASP.NET Core, Angular, Azure Application Insights, Azure Batch, AWS CloudWatch, MSAL Service,
-                Azure MSSQL Server migration, Vue 3.
-              </p>
-            </article>
-          </div>
-
-          <div class="experience-grid">
-            <article class="detail-panel exp-card">
-              <div class="exp-meta" data-i18n="experienceOrsted">DevOps & Software Engineer · Ørsted · Kuala Lumpur, Malaysia · Oct 2022 – Jun 2026</div>
-              <ul class="timeline-list">
-                <li data-i18n="orsted1">Reduced Azure resource provisioning time from about 1 day to under 30 minutes by refactoring a shared Terraform project structure across 22 state files and modularizing Azure role assignments.</li>
-                <li data-i18n="orsted2">Enabled self-service Azure resource provisioning through an Azure pipeline that generated configuration files and triggered Terraform deployments.</li>
-                <li data-i18n="orsted3">Accelerated Azure-to-AWS migration by implementing centralized GitHub Actions workflows, cutting new app deployment effort from 3 days to 2 hours.</li>
-                <li data-i18n="orsted4">Improved Excel export performance by reducing memory consumption by 50 percent through migration from ClosedXML to OpenXML SDK in an ASP.NET Core worker service.</li>
-                <li data-i18n="orsted5">Supported application security and audit compliance for a reporting system used by about 150 users across Denmark, UK, and Asia.</li>
-                <li data-i18n="orsted6">Improved observability by migrating application monitoring to OpenTelemetry and integrating AWS CloudWatch and X-Ray for an application used by about 50 users across UK, Denmark, and Asia.</li>
-              </ul>
-            </article>
-
-            <article class="detail-panel exp-card">
-              <div class="exp-meta" data-i18n="experienceGhl">Web Developer · GHL Systems Berhad · Kuala Lumpur, Malaysia · Nov 2021 – Sep 2022</div>
-              <ul class="timeline-list">
-                <li data-i18n="ghl1">Migrated legacy frontend from Dojo Toolkit to Vue 3.</li>
-                <li data-i18n="ghl2">Updated Java backend APIs to return standardized REST JSON responses for modern frontend compatibility.</li>
-              </ul>
-            </article>
-
-            <article class="detail-panel exp-card">
-              <div class="exp-meta" data-i18n="experienceDhl">Middleware Developer · DHL IT Services · Kuala Lumpur, Malaysia · May 2020 – Nov 2021</div>
-              <ul class="timeline-list">
-                <li data-i18n="dhl1">Developed and enhanced enterprise middleware solutions using IBM ACE 11 and Software AG webMethods.</li>
-                <li data-i18n="dhl2">Supported more than 200 message flow processes and up to 300K daily messages through IBM MQ for business-critical data exchange.</li>
-                <li data-i18n="dhl3">Delivered ESQL-based enhancements, fixes, and feature improvements with clear technical documentation for cross-team understanding.</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="split-section career-lower">
-            <article class="detail-panel">
-              <p class="eyebrow" data-i18n="education">Education</p>
-              <h3 data-i18n="degree">Bachelor's Degree | Computer Science | Yonsei University</h3>
-              <p data-i18n="educationDetails">Seoul, South Korea · 2016 – 2020</p>
-            </article>
-            <article class="detail-panel">
-              <p class="eyebrow" data-i18n="languages">Languages</p>
-              <h3>English, Mandarin, Korean, Malay, French</h3>
-              <p data-i18n="languageDetails">English (fluent), Mandarin (mother tongue), Korean (fluent daily), Malay (intermediate), French (upper beginner).</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="resume">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="projectSnapshot">Personal project snapshot</p>
-          <h2 data-i18n="projectsShow">What the projects show</h2>
-        </div>
-        <div class="resume-grid">
-          <article class="summary-card">
-            <h3 data-i18n="infrastructureEngineering">Infrastructure engineering</h3>
-            <p data-i18n="infrastructureText">
-              Terraform module reuse, Terragrunt orchestration, environment-specific configuration, and repeatable Azure platform setup.
-            </p>
-          </article>
-          <article class="summary-card">
-            <h3 data-i18n="platformSecurity">Platform security</h3>
-            <p data-i18n="platformText">
-              Early feedback loops for Kubernetes manifests, Dockerfiles, Helm charts, and PR validation with Checkov-based scanning.
-            </p>
-          </article>
-          <article class="summary-card">
-            <h3 data-i18n="operationalVisibility">Operational visibility</h3>
-            <p data-i18n="operationalText">
-              HTML reports, pipeline comments, and telemetry hooks that make platform behavior visible to developers and operators.
-            </p>
-          </article>
-        </div>
-      </section>
-
       <section class="section" id="projects">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="selectedWork">Selected work</p>
@@ -197,6 +105,33 @@
           </div>
         </article>
       </section>
+
+      <section class="section" id="resume">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="projectSnapshot">Personal project snapshot</p>
+          <h2 data-i18n="projectsShow">What the projects show</h2>
+        </div>
+        <div class="resume-grid">
+          <article class="summary-card">
+            <h3 data-i18n="infrastructureEngineering">Infrastructure engineering</h3>
+            <p data-i18n="infrastructureText">
+              Terraform module reuse, Terragrunt orchestration, environment-specific configuration, and repeatable Azure platform setup.
+            </p>
+          </article>
+          <article class="summary-card">
+            <h3 data-i18n="platformSecurity">Platform security</h3>
+            <p data-i18n="platformText">
+              Early feedback loops for Kubernetes manifests, Dockerfiles, Helm charts, and PR validation with Checkov-based scanning.
+            </p>
+          </article>
+          <article class="summary-card">
+            <h3 data-i18n="operationalVisibility">Operational visibility</h3>
+            <p data-i18n="operationalText">
+              HTML reports, pipeline comments, and telemetry hooks that make platform behavior visible to developers and operators.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
   </div>
 
@@ -204,12 +139,14 @@
     <article class="project-card">
       <div class="project-topline">
         <span class="project-pill" data-i18n="project">Project</span>
-        <a class="project-link" target="_blank" rel="noreferrer" data-i18n="openRepo">Open repo</a>
+        <div class="project-links">
+          <a class="project-link" data-project-page data-i18n="viewProject">View details →</a>
+          <a class="project-source" target="_blank" rel="noreferrer" data-i18n="openRepo">Open repo</a>
+        </div>
       </div>
       <h3 class="project-title"></h3>
       <p class="project-description"></p>
       <div class="project-chips"></div>
-      <div class="project-readme"></div>
     </article>
   </template>
 

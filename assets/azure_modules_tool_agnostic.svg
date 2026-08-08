@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  <rect x="36" y="36" width="1528" height="928" rx="28" fill="#ffffff" stroke="#d6deea" stroke-width="3"/>
+  <text x="84" y="112" fill="#152b4d" font-family="Arial, sans-serif" font-size="54" font-weight="700">Azure Infrastructure Modules</text>
+  <text x="86" y="162" fill="#2878c8" font-family="Arial, sans-serif" font-size="27" font-weight="700">Tool-agnostic • Reusable • Composable</text>
+  <text x="86" y="220" fill="#53657c" font-family="Arial, sans-serif" font-size="24">One Terraform module library, multiple delivery workflows.</text>
+
+  <rect x="592" y="292" width="416" height="300" rx="24" fill="#edf5ff" stroke="#2878c8" stroke-width="4"/>
+  <circle cx="800" cy="356" r="42" fill="#2878c8"/>
+  <text x="800" y="370" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="38" font-weight="700">T</text>
+  <text x="800" y="450" text-anchor="middle" fill="#152b4d" font-family="Arial, sans-serif" font-size="31" font-weight="700">Shared Terraform</text>
+  <text x="800" y="490" text-anchor="middle" fill="#152b4d" font-family="Arial, sans-serif" font-size="31" font-weight="700">module library</text>
+  <text x="800" y="535" text-anchor="middle" fill="#53657c" font-family="Arial, sans-serif" font-size="21">Networking • AKS • ACR</text>
+  <text x="800" y="566" text-anchor="middle" fill="#53657c" font-family="Arial, sans-serif" font-size="21">Storage • Monitoring • Security</text>
+
+  <rect x="100" y="292" width="350" height="220" rx="20" fill="#f2fbf5" stroke="#43a66f" stroke-width="3"/>
+  <text x="275" y="354" text-anchor="middle" fill="#1f7047" font-family="Arial, sans-serif" font-size="28" font-weight="700">Pure Terraform</text>
+  <text x="275" y="398" text-anchor="middle" fill="#345a49" font-family="Arial, sans-serif" font-size="21">Direct module composition</text>
+  <text x="275" y="432" text-anchor="middle" fill="#345a49" font-family="Arial, sans-serif" font-size="21">for simple projects</text>
+  <text x="275" y="476" text-anchor="middle" fill="#1f7047" font-family="Arial, sans-serif" font-size="19" font-weight="700">terraform plan / apply</text>
+
+  <rect x="1150" y="292" width="350" height="220" rx="20" fill="#fff8e8" stroke="#d59b29" stroke-width="3"/>
+  <text x="1325" y="354" text-anchor="middle" fill="#986b12" font-family="Arial, sans-serif" font-size="28" font-weight="700">Terragrunt</text>
+  <text x="1325" y="398" text-anchor="middle" fill="#705b2e" font-family="Arial, sans-serif" font-size="21">Layered environments</text>
+  <text x="1325" y="432" text-anchor="middle" fill="#705b2e" font-family="Arial, sans-serif" font-size="21">and shared configuration</text>
+  <text x="1325" y="476" text-anchor="middle" fill="#986b12" font-family="Arial, sans-serif" font-size="19" font-weight="700">terragrunt run-all</text>
+
+  <path d="M450 402 H560" fill="none" stroke="#2878c8" stroke-width="6"/>
+  <path d="M1040 402 H1150" fill="none" stroke="#2878c8" stroke-width="6"/>
+  <path d="M800 592 V680" fill="none" stroke="#2878c8" stroke-width="6"/>
+  <path d="M560 390 l-18 -12 v24 z M1040 390 l18 -12 v24 z M800 680 l-12 -18 h24 z" fill="#2878c8"/>
+
+  <rect x="430" y="704" width="740" height="166" rx="22" fill="#152b4d"/>
+  <text x="800" y="766" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="31" font-weight="700">AKS Infrastructure</text>
+  <text x="800" y="810" text-anchor="middle" fill="#d8e8fb" font-family="Arial, sans-serif" font-size="22">Uses the same modules through Terragrunt</text>
+  <text x="800" y="842" text-anchor="middle" fill="#d8e8fb" font-family="Arial, sans-serif" font-size="22">with explicit dev and production layers</text>
+
+  <text x="84" y="928" fill="#53657c" font-family="Arial, sans-serif" font-size="19">The module contract stays stable while the orchestration tool can change.</text>
+</svg>

@@ -284,11 +284,36 @@ h2 {
   margin: 20px 0 0;
 }
 
+.lede strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.certification-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.project-header-certifications {
+  margin: -18px 0 22px;
+}
+
+.certification-chip {
+  border: 1px solid rgba(169, 133, 220, 0.34);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: nowrap;
-  gap: 10px;
-  margin-top: 34px;
+  gap: 15px;
+  margin-top: 32px;
+  padding-top: 2px;
   overflow-x: auto;
 }
 
@@ -332,6 +357,20 @@ h2 {
   text-decoration: none;
 }
 
+.hero-actions .button-secondary,
+.hero-actions .button-ghost {
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.hero-actions .button-secondary:hover,
+.hero-actions .button-secondary:focus-visible,
+.hero-actions .button-ghost:hover,
+.hero-actions .button-ghost:focus-visible {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
 .button-ghost {
   background: transparent;
   border-color: var(--line);
@@ -356,7 +395,13 @@ h2 {
 }
 
 .profile-card .focus-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
   color: rgba(232, 238, 232, 0.78);
+  list-style: none;
 }
 
 html[data-theme='light'] .profile-card .focus-list {
@@ -367,6 +412,22 @@ html[data-theme='light'] .profile-card .focus-list {
 .timeline-list {
   margin: 0;
   padding-left: 18px;
+}
+
+.focus-list li {
+  padding: 7px 11px;
+  border: 1px solid rgba(140, 190, 181, 0.32);
+  border-radius: 999px;
+  background: rgba(140, 190, 181, 0.1);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+html[data-theme='light'] .focus-list li {
+  border-color: rgba(79, 146, 135, 0.3);
+  background: rgba(79, 146, 135, 0.08);
 }
 
 .section {
@@ -439,6 +500,70 @@ html[data-theme='light'] .career-summary-card p {
   color: var(--muted);
 }
 
+.achievements-panel {
+  background: var(--panel-strong);
+  border-top: 4px solid var(--accent);
+}
+
+.achievements-panel .eyebrow {
+  color: var(--accent-strong);
+}
+
+.achievements-panel > p:not(.eyebrow) {
+  max-width: 70ch;
+}
+
+.achievement-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.achievement-item {
+  border-top: 1px solid var(--line);
+}
+
+.achievement-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.achievement-item summary {
+  padding: 16px 28px 16px 0;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.55;
+  list-style-position: outside;
+}
+
+.achievement-item summary::marker {
+  color: var(--accent-strong);
+}
+
+.achievement-detail {
+  max-width: 78ch;
+  padding: 0 28px 16px 0;
+}
+
+.achievement-detail p {
+  margin: 0;
+}
+
+.achievement-detail-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.achievement-detail-list li + li {
+  margin-top: 8px;
+}
+
+.achievement-detail .achievement-tools {
+  margin-top: 10px;
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+}
+
 .skill-card {
   background: var(--panel-strong);
   border-top: 4px solid var(--teal);
@@ -474,6 +599,14 @@ html[data-theme='light'] .career-summary-card p {
   margin-bottom: 18px;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
 .project-pill {
   display: inline-flex;
   align-items: center;
@@ -489,10 +622,69 @@ html[data-theme='light'] .career-summary-card p {
 }
 
 .project-link,
+.project-source,
 .inline-link {
   color: var(--accent-strong);
   font-weight: 700;
   text-decoration: none;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid var(--accent-strong);
+  border-radius: 3px;
+  background: var(--accent-strong);
+  color: #fff;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.project-availability-panel .inline-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid var(--accent-strong);
+  border-radius: 3px;
+  background: var(--accent-strong);
+  color: #fff;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.project-availability-panel .inline-link:hover,
+.project-availability-panel .inline-link:focus-visible {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.project-source {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.project-source:hover,
+.project-source:focus-visible {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+  transform: translateY(-1px);
 }
 
 .contact-links {
@@ -516,6 +708,7 @@ html[data-theme='light'] .career-summary-card p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 14px;
 }
 
 .chip {
@@ -535,9 +728,106 @@ html[data-theme='light'] .career-summary-card p {
   border-top: 1px solid var(--line);
 }
 
-.project-readme ul {
+.project-readme ul,
+.project-readme-content ul {
   margin: 0;
   padding-left: 18px;
+}
+
+.project-readme-content > ul {
+  margin-bottom: 24px;
+}
+
+.project-readme-content h3 {
+  margin: 26px 0 8px;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.project-readme-content h3 + ul {
+  margin-bottom: 20px;
+}
+
+.project-detail-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.project-detail-grid > .resume-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-media {
+  margin: 0;
+}
+
+.project-media-featured {
+  grid-column: 1 / -1;
+}
+
+.project-media video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #000;
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.project-media figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.project-detail-intro {
+  display: grid;
+  gap: 18px;
+}
+
+.kubedock-project-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  align-items: start;
+}
+
+.kubedock-project-intro > .hero-actions {
+  margin-top: 0;
+}
+
+.kubedock-project-intro > .project-availability-panel {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+.project-detail-intro > .hero-actions .button-secondary::after {
+  content: ' ↗';
+}
+
+.project-readme-content {
+  max-height: 720px;
+  margin: 0;
+  overflow: auto;
+  white-space: normal;
+  color: var(--muted);
+  font: inherit;
+  line-height: 1.7;
 }
 
 .split-section {
@@ -546,6 +836,23 @@ html[data-theme='light'] .career-summary-card p {
 
 .detail-panel {
   background: var(--panel-strong);
+}
+
+.project-detail-grid .resume-grid .eyebrow,
+.detail-label {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 7px 11px;
+  border: 1px solid var(--accent-strong);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .accent-panel {
@@ -580,11 +887,26 @@ html[data-theme='light'] .career-summary-card p {
 
 @media (max-width: 960px) {
   .hero-grid,
+  .project-detail-intro,
   .resume-grid,
   .project-grid,
+  .project-media-grid,
   .skill-grid,
   .career-lower,
   .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .kubedock-project-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .kubedock-project-intro > .project-availability-panel {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .project-detail-grid > .resume-grid {
     grid-template-columns: 1fr;
   }
 
@@ -649,6 +971,7 @@ html[data-theme='light'] .career-summary-card p {
   .orb,
   .hero-actions,
   .project-link,
+  .project-source,
   .inline-link {
     display: none !important;
   }
