@@ -171,11 +171,13 @@ function applyTheme(theme) {
 }
 
 function applyLanguage(language) {
-  currentLanguage = language;
-  document.documentElement.lang = language;
+  const selectedLanguage = language === 'fr' ? 'fr' : 'en';
+  currentLanguage = selectedLanguage;
+  document.documentElement.lang = selectedLanguage;
+  localStorage.setItem('portfolio-language', selectedLanguage);
 
   document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const translation = pageTranslations[language][element.dataset.i18n];
+    const translation = pageTranslations[selectedLanguage][element.dataset.i18n];
     if (translation) {
       element.textContent = translation;
     }
@@ -183,11 +185,11 @@ function applyLanguage(language) {
 
   const readmeLabel = document.querySelector('[data-i18n="projectReadme"]');
   if (readmeLabel) {
-    readmeLabel.textContent = language === 'fr' ? frenchTranslations.projectReadme : 'Summary';
+    readmeLabel.textContent = selectedLanguage === 'fr' ? frenchTranslations.projectReadme : 'Summary';
   }
 
   languageButtons.forEach((button) => {
-    const isActive = button.dataset.language === language;
+    const isActive = button.dataset.language === selectedLanguage;
     button.classList.toggle('is-active', isActive);
     button.setAttribute('aria-pressed', String(isActive));
   });
@@ -528,5 +530,6 @@ if (printButton) {
 }
 
 applyTheme(localStorage.getItem('portfolio-theme') ?? 'dark');
+applyLanguage(localStorage.getItem('portfolio-language') ?? 'en');
 boot();
 bootProjectDetail();
