@@ -122,6 +122,28 @@ const frenchTranslations = {
   selectedWork: 'Projets selectionnes', githubProjects: 'Projets issus de GitHub', technicalProfile: 'Profil technique', commonThemes: 'Themes communs', theme1: 'Des abstractions centralisees et reutilisables plutot que des infrastructures ponctuelles.', theme2: 'Des environnements en couches avec une configuration racine partagee et des surcharges propres.', theme3: 'Des controles de securite integres aux pipelines de livraison avant le deploiement en production.', theme4: 'Des retours clairs pour les operateurs grace aux rapports, commentaires et donnees de supervision.', contact: 'Contact', letsConnect: 'Echangeons', contactText: 'Retrouvez-moi sur LinkedIn ou consultez mon profil GitHub pour plus de details sur mes projets.', viewGithub: 'Voir le profil GitHub', project: 'Projet', openRepo: 'Ouvrir le depot', projectAvailability: 'Disponibilite', marketplaceText: 'Publiee comme extension Azure DevOps que les equipes peuvent installer et utiliser dans leurs pipelines.', devsecopsKeyword: 'DevSecOps', devsecopsText: 'integre la securite au quotidien de la livraison.', shiftLeftKeyword: 'Securite shift-left', shiftLeftText: 'fait remonter les resultats avant le deploiement.', developerAutonomyKeyword: 'Autonomie des developpeurs', developerAutonomyText: 'permet aux equipes d agir sur des retours clairs sans attendre une transmission distincte de la securite.', openMarketplace: 'Voir sur Azure DevOps Marketplace →', projectArchitecture: 'Architecture du projet', architectureAks: 'Architecture AKS avec Terragrunt', architectureModules: 'Modules Azure independants de l outil',
 };
 
+const skills = [
+  ['skillTerraform', 'Terraform IaC'],
+  ['skillDocker', 'Docker'],
+  ['skillAks', 'Azure Kubernetes Services'],
+  ['skillAzurePipelines', 'Azure CI/CD pipelines'],
+  ['skillAzureDevops', 'Azure DevOps'],
+  ['skillHelm', 'Helm Chart Templating'],
+  ['skillGithubActions', 'GitHub Actions'],
+  ['skillArtifactory', 'JFrog Artifactory'],
+  ['skillSonarcloud', 'SonarCloud'],
+  ['skillKyverno', 'Kyverno'],
+  ['skillTerragrunt', 'Terragrunt'],
+  ['skillAspnet', 'ASP.NET Core'],
+  ['skillAngular', 'Angular'],
+  ['skillPython', 'Python'],
+  ['skillPowershell', 'PowerShell'],
+  ['skillBash', 'Bash'],
+  ['skillLinux', 'Linux'],
+  ['skillWindowsServer', 'Windows Server'],
+  ['skillOpenTelemetry', 'OpenTelemetry'],
+];
+
 function normalizeFrenchText(value) {
   if (typeof value === 'string') {
     return value.replace(/\b(d|D|l|L|j|J|qu|Qu|lorsqu|Lorsqu) ([aeiouyhAEIOUYH])/g, "$1'$2");
@@ -183,6 +205,8 @@ function applyLanguage(language) {
     }
   });
 
+  renderSkills();
+
   const readmeLabel = document.querySelector('[data-i18n="projectReadme"]');
   if (readmeLabel) {
     readmeLabel.textContent = selectedLanguage === 'fr' ? frenchTranslations.projectReadme : 'Summary';
@@ -204,6 +228,17 @@ function applyLanguage(language) {
     renderProjectArchitecture(loadedProjectDetail);
     renderProjectDetail(loadedProjectDetail);
   }
+}
+
+function renderSkills() {
+  document.querySelectorAll('[data-skills-list]').forEach((list) => {
+    list.replaceChildren(...skills.map(([key, englishLabel]) => {
+      const item = document.createElement('li');
+      item.dataset.i18n = key;
+      item.textContent = currentLanguage === 'fr' ? frenchTranslations[key] : englishLabel;
+      return item;
+    }));
+  });
 }
 
 function decodeReadmeContent(encoded) {

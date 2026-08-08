@@ -14,6 +14,12 @@ This is a bilingual portfolio website. English and French content must stay sync
 - Keep `document.documentElement.lang` synchronized with the selected language.
 - Preserve the existing no-build static-site approach. Do not add a translation framework unless the project requirements change substantially.
 
+## Shared content
+
+- Keep the skills list in the `skills` definition in `script.js` as the single source of truth for both `index.html` and `career.html`.
+- Keep the corresponding French labels in `frenchTranslations` in `script.js`; do not duplicate skill `<li>` elements in either HTML page.
+- Both pages should use a `[data-skills-list]` container rendered by `script.js` so additions and removals are made once.
+
 ## Validation
 
 After bilingual content changes:
