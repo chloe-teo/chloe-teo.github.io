@@ -85,8 +85,10 @@
                     <li data-i18n="achievement1Detail1">Reorganized the RBAC structure around actual projects and separated each project's configuration into dedicated tfvars files.</li>
                     <li data-i18n="achievement1Detail2">Replaced count with for_each for predictable storage account changes and added validation for resource creation, updates, and deletion.</li>
                     <li data-i18n="achievement1Detail3">Made the Azure modules more flexible by supporting additional resource properties without hardcoding each property type.</li>
+                    <li data-i18n="achievement1Detail4">Migrated the Azure Batch Virtual Network to strengthen the security posture and align with company architecture best practices without causing downtime.</li>
                   </ul>
                   <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Terraform, Azure Pipelines, Azure CLI, PowerShell, Bash</p>
+                  <p class="achievement-tools"><strong data-i18n="azureResourcesLabel">Azure resources</strong>: Azure Batch, Azure Storage Accounts (Blob Storage, File Shares), Azure Key Vault, Azure Role Assignments, Azure Recovery Services Vault, Azure Private Endpoints, Azure Virtual Network</p>
                 </div>
               </details>
               <details class="achievement-item">
@@ -119,7 +121,62 @@
                     <li data-i18n="achievement4Detail2">Updated service account modules to support custom service accounts for different teams and workloads.</li>
                     <li data-i18n="achievement4Detail3">Improved the maintainability and flexibility of namespace-level access management.</li>
                   </ul>
-                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Terraform, Azure Pipelines</p>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Terraform, Azure Pipelines, Azure Kubernetes Service</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement5">Strengthened application security and operational resilience by migrating the Windows Server environment hosting self-hosted Azure Pipeline agents and application servers.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement5Detail1">Migrated self-hosted Azure Pipeline agents to support on-premises connectivity and application deployments while moving remote administration from HTTP-based WinRM to HTTPS.</li>
+                    <li data-i18n="achievement5Detail2">Coordinated firewall, load-balancing, network, and server-configuration dependencies across teams and tested changes before production migration.</li>
+                    <li data-i18n="achievement5Detail3">Improved dependency-server observability with Splunk dashboards, email alerts, PowerShell connectivity checks, and operational documentation.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: PowerShell, Bash, Azure Pipelines, Azure Releases, Windows Server, WinRM, RabbitMQ, Redis, Splunk</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement6">Established a reusable delivery path for migrating applications from Azure to AWS EKS, reducing initial application setup and deployment effort to two hours.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement6Detail1">Built reusable GitHub Actions workflows for ASP.NET Core backends and Angular frontends with unit testing, container image scanning, and dependency scanning.</li>
+                    <li data-i18n="achievement6Detail2">Integrated AWS Secrets Manager with EKS workloads through IRSA for secure runtime secret retrieval.</li>
+                    <li data-i18n="achievement6Detail3">Migrated Angular telemetry from Azure Application Insights to AWS CloudWatch using OpenTelemetry for cloud-agnostic observability.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: OpenTelemetry, AWS CloudWatch, ASP.NET Core, Angular, AWS Secrets Manager, GitHub Actions, Amazon EKS</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement7">Reduced memory usage by 50 percent when processing million-row Excel datasets by replacing ClosedXML with OpenXML SAX processing.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement7Detail1">Replaced the ClosedXML approach with OpenXML's SAX-based processing model for large Excel exports.</li>
+                    <li data-i18n="achievement7Detail2">Stored generated Excel files in container storage instead of retaining them in memory during processing.</li>
+                    <li data-i18n="achievement7Detail3">Used Azure Application Insights metrics and Postman testing to compare memory usage before and after the change.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: ASP.NET Core, OpenXML, Azure Application Insights, Postman</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement8">Improved Helm chart flexibility and deployment troubleshooting by removing hardcoded values and rendering Kubernetes manifests before release.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement8Detail1">Removed hardcoded values from Helm templates so deployments could support different application configurations.</li>
+                    <li data-i18n="achievement8Detail2">Added a pipeline step to render Kubernetes manifests before deployment, making configuration issues easier to investigate.</li>
+                    <li data-i18n="achievement8Detail3">Updated the chart structure to support multiple CronJobs without duplicating template logic.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: Helm, Azure Pipelines</p>
+                </div>
+              </details>
+              <details class="achievement-item">
+                <summary data-i18n="achievement9">Improved ASP.NET Core incident handling by returning clearer network error messages and accommodating a slow dependency API through Kubernetes Ingress configuration.</summary>
+                <div class="achievement-detail">
+                  <ul class="achievement-detail-list">
+                    <li data-i18n="achievement9Detail1">Identified common network-related ASP.NET Core exceptions and added custom messages to provide the frontend with more actionable troubleshooting information.</li>
+                    <li data-i18n="achievement9Detail2">Increased the Kubernetes Ingress proxy timeout to accommodate a dependency API that required additional processing time.</li>
+                    <li data-i18n="achievement9Detail3">Improved the information available to users and support teams during application incidents.</li>
+                  </ul>
+                  <p class="achievement-tools"><strong data-i18n="toolsLabel">Tools</strong>: ASP.NET Core, Kubernetes Ingress</p>
                 </div>
               </details>
             </div>
@@ -190,6 +247,7 @@
     </main>
   </div>
 
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

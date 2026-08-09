@@ -33,6 +33,43 @@
 - Improved the maintainability and adaptability of namespace-level access management.
 - **Tools:** Terraform and Azure Pipelines.
 
+### 5. Secure application server migration
+
+- Migrated Azure self-hosted pipeline agents to a new Windows Server environment to support on-premises connectivity and application deployments.
+- Improved security by migrating remote administration from HTTP-based WinRM to HTTPS.
+- Coordinated migration dependencies across teams, including firewall rules, load-balancing changes, network updates, and server configuration.
+- Improved observability by creating Splunk dashboards and email alerts for dependency-server health and service status.
+- Created PowerShell connectivity checks and operational documentation to support ongoing maintenance.
+- **Tools:** PowerShell, Bash, Azure Pipelines, Azure Releases, Windows Server, WinRM, RabbitMQ, Redis, and Splunk.
+
+### 6. Azure-to-AWS application migration
+
+- Established a reusable delivery path for deploying applications to AWS EKS, enabling new applications to complete their initial setup within two hours.
+- Designed GitHub Actions workflows for ASP.NET Core backends and Angular frontends, including unit testing, container image scanning, and dependency scanning.
+- Integrated AWS Secrets Manager with EKS workloads through IRSA for secure runtime secret retrieval.
+- Migrated Angular application telemetry from Azure Application Insights to AWS CloudWatch using OpenTelemetry for a cloud-agnostic observability approach.
+- **Tools:** OpenTelemetry, AWS CloudWatch, ASP.NET Core, Angular, AWS Secrets Manager, GitHub Actions, and Amazon EKS.
+
+### 7. Lower-memory Excel processing for large datasets
+
+- Reduced memory usage by 50% when processing datasets containing millions of rows.
+- Replaced the ClosedXML approach with OpenXML's SAX-based processing model and used container storage for generated Excel files instead of keeping them in memory.
+- Used Azure Application Insights metrics and Postman testing to compare memory usage before and after the change.
+- **Tools:** ASP.NET Core, OpenXML, Azure Application Insights, and Postman.
+
+### 8. More flexible Helm charts and deployment troubleshooting
+
+- Removed hardcoded values from Helm templates so deployments could support different application configurations.
+- Added a pipeline step to render Kubernetes manifests before deployment, making configuration issues easier to investigate.
+- Updated the chart structure to support multiple CronJobs without duplicating template logic.
+- **Tools:** Helm and Azure Pipelines.
+
+### 9. Clearer ASP.NET Core error handling
+
+- Identified common network-related ASP.NET Core exceptions and added custom messages to provide the frontend with more actionable troubleshooting information.
+- Increased the Kubernetes Ingress proxy timeout to accommodate a dependency API that required additional processing time.
+- Improved the information available to users and support teams during application incidents.
+
 ## Responsibilities
 
 - Managed reusable shared pipeline templates for development teams and their CI/CD workflows.

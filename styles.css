@@ -772,6 +772,10 @@ html[data-theme='light'] .career-summary-card p {
   grid-column: 1 / -1;
 }
 
+.project-media-workflow {
+  grid-column: 1 / -1;
+}
+
 .project-media video {
   display: block;
   width: 100%;

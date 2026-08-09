@@ -8,6 +8,7 @@ This is a bilingual portfolio website. English and French content must stay sync
 - Whenever English user-facing text is added, removed, or changed, update the corresponding French translation in the same change.
 - Whenever a new translatable HTML element is added, give it a stable `data-i18n` key and add the matching French entry to `frenchTranslations` in `script.js`.
 - Do not leave new or changed recruiter-facing content in English-only form. This includes headings, paragraphs, buttons, labels, experience bullets, project descriptions, loading states, empty states, error messages, and accessibility text.
+- Preserve French apostrophes in contractions, including `l'`, `d'`, `qu'`, `j'`, and `n'`; do not remove them from translations or normalize them into ungrammatical spacing.
 - Keep repeated translation keys intentional: use one key when the same wording is shared, and create separate keys when the translations need different wording by context.
 - For dynamic project content, provide both English and French title/description values and ensure rerendering works when switching in either direction.
 - When changing a translation key, update both the English source text and the French translation, and verify that switching `EN -> FR -> EN` restores the correct text.
@@ -16,6 +17,7 @@ This is a bilingual portfolio website. English and French content must stay sync
 
 ## Shared content
 
+- Keep reusable project configuration, static media text, accessibility text, and bilingual captions in the shared `content.js` file when they are consumed by `script.js`; do not duplicate those values across HTML pages or rendering code.
 - Keep the skills list in the `skills` definition in `script.js` as the single source of truth for both `index.html` and `career.html`.
 - Keep the corresponding French labels in `frenchTranslations` in `script.js`; do not duplicate skill `<li>` elements in either HTML page.
 - Both pages should use a `[data-skills-list]` container rendered by `script.js` so additions and removals are made once.
