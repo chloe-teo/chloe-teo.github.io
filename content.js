@@ -1,5 +1,59 @@
 const projectSeeds = [
   {
+    name: 'my-function-app',
+    title: 'Function App Infrastructure',
+    repo: 'chloe-teo/my-function-app',
+    url: 'https://github.com/chloe-teo/my-function-app',
+    description:
+      'Terraform-managed Azure Function App platform with private networking, managed identity, Key Vault, Blob Storage, and Azure DevOps delivery.',
+    titleFr: 'Infrastructure Function App',
+    descriptionFr:
+      'Plateforme Azure Function App geree avec Terraform, avec reseau prive, identite geree, Key Vault, stockage Blob et livraison Azure DevOps.',
+    summary:
+      'Terraform project for an Azure Function App platform that combines private networking, managed identity, private Blob Storage and Key Vault access, monitoring, and Azure DevOps delivery.',
+    summaryFr:
+      'Projet Terraform pour une plateforme Azure Function App qui combine reseau prive, identite geree, acces prive au stockage Blob et a Key Vault, supervision et livraison Azure DevOps.',
+    summarySections: [
+      {
+        heading: 'What it includes:',
+        items: [
+          'Reusable Terraform modules for the Function App, service plan, virtual network, storage account, Key Vault, Application Insights, private endpoints, private DNS zones, and role assignments.',
+          'A Flex Consumption Function App with managed identity and VNet integration.',
+          'Azure DevOps delivery that builds and deploys the C# function package to the protected runtime.',
+        ],
+      },
+      {
+        heading: 'How it is secured:',
+        items: [
+          'The Function App reaches Blob Storage and Key Vault through private endpoints in a dedicated subnet.',
+          'Managed identity and role assignments provide access without application secrets, while IP restrictions remain configured for application and SCM access.',
+        ],
+      },
+    ],
+    summarySectionsFr: [
+      {
+        heading: 'Ce que le projet inclut :',
+        items: [
+          'Modules Terraform reutilisables pour la Function App, le plan de service, le reseau virtuel, le compte de stockage, Key Vault, Application Insights, les points de terminaison prives, les zones DNS privees et les attributions de roles.',
+          'Une Function App Flex Consumption avec identite geree et integration au VNet.',
+          'Une livraison Azure DevOps qui compile et deploie le package de fonction C# vers le runtime protege.',
+        ],
+      },
+      {
+        heading: 'Securisation :',
+        items: [
+          'La Function App accede au stockage Blob et a Key Vault via des points de terminaison prives dans un sous-reseau dedie.',
+          'L identite geree et les attributions de roles fournissent l acces sans secrets applicatifs, tandis que les restrictions IP restent configurees pour l application et l acces SCM.',
+        ],
+      },
+    ],
+    chips: ['Terraform', 'Azure Functions', 'Private endpoints', 'Managed identity', 'Azure DevOps'],
+    impact: 'Demonstrates an end-to-end serverless delivery path that treats networking, identity, secrets, and observability as part of the application platform.',
+    impactFr: 'Demontre un parcours de livraison serverless de bout en bout qui traite le reseau, l identite, les secrets et l observabilite comme des parties de la plateforme applicative.',
+    benefits: 'Keeps application dependencies private, removes secret-based runtime access, and makes the infrastructure composable through reusable Terraform modules.',
+    benefitsFr: 'Garde les dependances applicatives privees, elimine l acces runtime base sur des secrets et rend l infrastructure composable grace a des modules Terraform reutilisables.',
+  },
+  {
     name: 'kubedock-security-scan',
     title: 'KubeDock Security Scan',
     repo: 'chloe-teo/kubedock-security-scan',
@@ -141,10 +195,36 @@ const frenchTranslations = {
   ghl1: 'Migration d un frontend legacy de Dojo Toolkit vers Vue 3.', ghl2: 'Mise a jour des API backend Java afin de renvoyer des reponses REST JSON standardisees compatibles avec un frontend moderne.', dhl1: 'Developpement et evolution de solutions middleware d entreprise avec IBM ACE 11 et Software AG webMethods.', dhl2: 'Prise en charge de plus de 200 processus de flux de messages et jusqu a 300 000 messages quotidiens via IBM MQ pour des echanges de donnees critiques.', dhl3: 'Livraison d evolutions, de corrections et de fonctionnalites ESQL avec une documentation technique claire pour faciliter la comprehension entre equipes.',
   education: 'Formation', degree: 'Licence | Informatique | Universite Yonsei', educationDetails: 'Seoul, Coree du Sud · 2016 – 2020', languages: 'Langues', languageDetails: 'Anglais (courant), mandarin (langue maternelle), coreen (courant au quotidien), malais (intermediaire), francais (niveau debutant avance).',
   projectsShow: 'Ce que montrent les projets', infrastructureEngineering: 'Ingenierie infrastructure', infrastructureText: 'Reutilisation de modules Terraform, orchestration Terragrunt, configuration propre a chaque environnement et mise en place reproductible de plateformes Azure.', platformSecurity: 'Securite de plateforme', platformText: 'Boucles de retour rapides pour les manifestes Kubernetes, les Dockerfiles, les charts Helm et la validation des pull requests grace a des analyses basees sur Checkov.', operationalVisibility: 'Visibilite operationnelle', operationalText: 'Rapports HTML, commentaires de pipeline et points d instrumentation qui rendent le comportement de la plateforme visible pour les developpeurs et les operateurs.',
-  selectedWork: 'Projets selectionnes', githubProjects: 'Projets issus de GitHub', technicalProfile: 'Profil technique', commonThemes: 'Themes communs', theme1: 'Des abstractions centralisees et reutilisables plutot que des infrastructures ponctuelles.', theme2: 'Des environnements en couches avec une configuration racine partagee et des surcharges propres.', theme3: 'Des controles de securite integres aux pipelines de livraison avant le deploiement en production.', theme4: 'Des retours clairs pour les operateurs grace aux rapports, commentaires et donnees de supervision.', contact: 'Contact', letsConnect: 'Echangeons', contactText: 'Retrouvez-moi sur LinkedIn ou consultez mon profil GitHub pour plus de details sur mes projets.', viewGithub: 'Voir le profil GitHub', project: 'Projet', openRepo: 'Ouvrir le depot', projectAvailability: 'Disponibilite', marketplaceText: 'Publiee comme extension Azure DevOps que les equipes peuvent installer et utiliser dans leurs pipelines.', devsecopsKeyword: 'DevSecOps', devsecopsText: 'integre la securite au quotidien de la livraison.', shiftLeftKeyword: 'Securite shift-left', shiftLeftText: 'fait remonter les resultats avant le deploiement.', developerAutonomyKeyword: 'Autonomie des developpeurs', developerAutonomyText: 'permet aux equipes d agir sur des retours clairs sans attendre une transmission distincte de la securite.', openMarketplace: 'Voir sur Azure DevOps Marketplace →', projectArchitecture: 'Architecture du projet', architectureAks: 'Architecture AKS avec Terragrunt', architectureModules: 'Modules Azure independants de l outil',
+  selectedWork: 'Projets selectionnes', githubProjects: 'Projets issus de GitHub', technicalProfile: 'Profil technique', commonThemes: 'Themes communs', theme1: 'Des abstractions centralisees et reutilisables plutot que des infrastructures ponctuelles.', theme2: 'Des environnements en couches avec une configuration racine partagee et des surcharges propres.', theme3: 'Des controles de securite integres aux pipelines de livraison avant le deploiement en production.', theme4: 'Des retours clairs pour les operateurs grace aux rapports, commentaires et donnees de supervision.', contact: 'Contact', letsConnect: 'Echangeons', contactText: 'Retrouvez-moi sur LinkedIn ou consultez mon profil GitHub pour plus de details sur mes projets.', viewGithub: 'Voir le profil GitHub', project: 'Projet', openRepo: 'Ouvrir le depot', projectAvailability: 'Disponibilite', marketplaceText: 'Publiee comme extension Azure DevOps que les equipes peuvent installer et utiliser dans leurs pipelines.', devsecopsKeyword: 'DevSecOps', devsecopsText: 'integre la securite au quotidien de la livraison.', shiftLeftKeyword: 'Securite shift-left', shiftLeftText: 'fait remonter les resultats avant le deploiement.', developerAutonomyKeyword: 'Autonomie des developpeurs', developerAutonomyText: 'permet aux equipes d agir sur des retours clairs sans attendre une transmission distincte de la securite.', openMarketplace: 'Voir sur Azure DevOps Marketplace →', projectArchitecture: 'Architecture du projet', architectureAks: 'Architecture AKS avec Terragrunt', architectureModules: 'Modules Azure independants de l outil', architectureFunctionApp: 'Architecture Function App privee',
 };
 
 const projectMediaContent = {
+  'my-function-app': {
+    diagrams: [
+      {
+        src: 'assets/function-app-architecture.svg',
+        alt: {
+          en: 'End-to-end Azure Function App delivery architecture',
+          fr: 'Architecture de livraison Azure Function App de bout en bout',
+        },
+        caption: {
+          en: 'Azure DevOps deploys the C# function to a private Azure runtime with managed identity, private storage, and Key Vault access.',
+          fr: 'Azure DevOps deploie la fonction C# vers un runtime Azure prive avec identite geree, stockage prive et acces a Key Vault.',
+        },
+      },
+      {
+        src: 'assets/terraform-module-resource-map.svg',
+        alt: {
+          en: 'Terraform module and Azure resource relationship map for the private Function App',
+          fr: 'Carte des relations entre modules Terraform et ressources Azure pour la Function App privee',
+        },
+        caption: {
+          en: 'Reusable Terraform modules compose the private Function App platform and its Azure resource relationships.',
+          fr: 'Des modules Terraform reutilisables composent la plateforme Function App privee et ses relations entre ressources Azure.',
+        },
+      },
+    ],
+  },
   'azure-modules': {
     workflow: {
       src: 'assets/AI-assisted-workflow.png',

@@ -208,7 +208,7 @@ function createReadmeList(items, className = 'project-readme') {
 }
 
 function renderProjectArchitecture(seed) {
-  if (!projectDetailRoot || !['aks-infra', 'azure-modules'].includes(seed.name)) {
+  if (!projectDetailRoot || !['aks-infra', 'azure-modules', 'my-function-app'].includes(seed.name)) {
     return;
   }
 
@@ -225,8 +225,8 @@ function renderProjectArchitecture(seed) {
   label.textContent = currentLanguage === 'fr' ? frenchTranslations.projectArchitecture : 'Project architecture';
   const title = document.createElement('h2');
   title.textContent = currentLanguage === 'fr'
-    ? (seed.name === 'aks-infra' ? frenchTranslations.architectureAks : frenchTranslations.architectureModules)
-    : (seed.name === 'aks-infra' ? 'AKS architecture with Terragrunt' : 'Tool-agnostic Azure modules');
+    ? (seed.name === 'aks-infra' ? frenchTranslations.architectureAks : seed.name === 'azure-modules' ? frenchTranslations.architectureModules : frenchTranslations.architectureFunctionApp)
+    : (seed.name === 'aks-infra' ? 'AKS architecture with Terragrunt' : seed.name === 'azure-modules' ? 'Tool-agnostic Azure modules' : 'Private Function App architecture');
   heading.append(label, title);
 
   const grid = document.createElement('div');
@@ -234,16 +234,29 @@ function renderProjectArchitecture(seed) {
   const figure = document.createElement('figure');
   figure.className = 'project-media project-media-featured';
   const image = document.createElement('img');
-  image.src = seed.name === 'aks-infra' ? 'assets/terragrunt_aks_structure.jpg' : 'assets/azure_modules_tool_agnostic.svg';
+  image.src = seed.name === 'aks-infra' ? 'assets/terragrunt_aks_structure.jpg' : seed.name === 'azure-modules' ? 'assets/azure_modules_tool_agnostic.svg' : projectMediaContent[seed.name].diagrams[0].src;
   image.alt = currentLanguage === 'fr'
-    ? (seed.name === 'aks-infra' ? 'Diagramme de l architecture AKS avec Terragrunt' : 'Diagramme des modules Azure utilisables avec Terraform ou Terragrunt')
-    : (seed.name === 'aks-infra' ? 'AKS architecture diagram with Terragrunt' : 'Azure modules diagram showing Terraform and Terragrunt usage');
+    ? (seed.name === 'aks-infra' ? 'Diagramme de l architecture AKS avec Terragrunt' : seed.name === 'azure-modules' ? 'Diagramme des modules Azure utilisables avec Terraform ou Terragrunt' : projectMediaContent[seed.name].diagrams[0].alt.fr)
+    : (seed.name === 'aks-infra' ? 'AKS architecture diagram with Terragrunt' : seed.name === 'azure-modules' ? 'Azure modules diagram showing Terraform and Terragrunt usage' : projectMediaContent[seed.name].diagrams[0].alt.en);
   const caption = document.createElement('figcaption');
   caption.textContent = currentLanguage === 'fr'
-    ? (seed.name === 'aks-infra' ? 'La structure Terragrunt orchestre les modules partages pour AKS.' : 'Les memes modules Azure restent utilisables avec Terraform ou Terragrunt, comme le montre AKS Infrastructure.')
-    : (seed.name === 'aks-infra' ? 'Terragrunt orchestrates the shared modules used by the AKS platform.' : 'The same Azure modules can be used with Terraform or Terragrunt, as demonstrated by AKS Infrastructure.');
+    ? (seed.name === 'aks-infra' ? 'La structure Terragrunt orchestre les modules partages pour AKS.' : seed.name === 'azure-modules' ? 'Les memes modules Azure restent utilisables avec Terraform ou Terragrunt, comme le montre AKS Infrastructure.' : projectMediaContent[seed.name].diagrams[0].caption.fr)
+    : (seed.name === 'aks-infra' ? 'Terragrunt orchestrates the shared modules used by the AKS platform.' : seed.name === 'azure-modules' ? 'The same Azure modules can be used with Terraform or Terragrunt, as demonstrated by AKS Infrastructure.' : projectMediaContent[seed.name].diagrams[0].caption.en);
   figure.append(image, caption);
   grid.appendChild(figure);
+
+  if (seed.name === 'my-function-app') {
+    const moduleDiagram = projectMediaContent[seed.name].diagrams[1];
+    const moduleFigure = document.createElement('figure');
+    moduleFigure.className = 'project-media project-media-workflow';
+    const moduleImage = document.createElement('img');
+    moduleImage.src = moduleDiagram.src;
+    moduleImage.alt = moduleDiagram.alt[currentLanguage];
+    const moduleCaption = document.createElement('figcaption');
+    moduleCaption.textContent = moduleDiagram.caption[currentLanguage];
+    moduleFigure.append(moduleImage, moduleCaption);
+    grid.appendChild(moduleFigure);
+  }
 
   if (seed.name === 'azure-modules') {
     const workflowContent = projectMediaContent[seed.name]?.workflow;
